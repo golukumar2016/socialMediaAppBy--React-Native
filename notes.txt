@@ -1,0 +1,12 @@
+useColorScheme :- In React Native, useColorScheme is a built-in Hook that lets you detect whether the user’s device is currently using light mode or dark mode.
+
+- SafeAreaProvider
+- A context provider that wraps your app and enables safe area calculations.
+- It ensures that components inside it can access safe area insets (like top notch, bottom home indicator) on iOS and Android.
+- You typically wrap your root component with this.
+
+- useSafeAreaInsets(): This hook returns the safe area insets of the device — the space around the screen that shouldn't be obstructed by UI elements (like the notch, status bar, or home indicator).
+
+
+
+

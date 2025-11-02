@@ -1,45 +1,41 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import { View, Text, Button } from "react-native";
+import React from "react";
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+import { SafeAreaProvider, useSafeAreaInsets, } from 'react-native-safe-area-context';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Welcome from "./app/Welcome";
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
 
-  return (
-    <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
-    </SafeAreaProvider>
-  );
-}
 
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
+export type RootStackParamList = {
+  Welcome: undefined;
+  Details : { ProductId : string};
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
+
+const App = () => {
 
   return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
-    </View>
-  );
-}
+    
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Welcome"
+        screenOptions={{
+          headerShown : false
+        }}>
+          <Stack.Screen name="Welcome" component={Welcome} />
+        </Stack.Navigator>
+      </NavigationContainer>
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+      
+  );
+};
 
 export default App;
+
+
+    
+  
+
+
