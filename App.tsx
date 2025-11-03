@@ -18,7 +18,6 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const App = () => {
 
   return (
-    
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Welcome"
         screenOptions={{
@@ -28,7 +27,6 @@ const App = () => {
         </Stack.Navigator>
       </NavigationContainer>
 
-      
   );
 };
 

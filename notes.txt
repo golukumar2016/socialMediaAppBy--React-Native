@@ -8,5 +8,6 @@ useColorScheme :- In React Native, useColorScheme is a built-in Hook that lets y
 - useSafeAreaInsets(): This hook returns the safe area insets of the device — the space around the screen that shouldn't be obstructed by UI elements (like the notch, status bar, or home indicator).
 
 
-
+ActivityIndicator:  it is a built-in React Native component used to show a loading spinner — perfect for indicating that something is in progress, like a network request or a button action.
+
 
