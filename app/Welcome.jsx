@@ -1,12 +1,21 @@
 import { StyleSheet, Text, View, Image, StatusBar, Pressable} from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native';
+
+
+
 import SreenWrapper from '../components/SreenWrapper'
 
 import { wp , hp} from '../helpers/common'
 import { theme } from '../constants/theme'
 import  Button  from '../components/Button.jsx'
 
+
+
 const Welcome = () => {
+
+  const navigation = useNavigation();
+
   return (
     <SreenWrapper bg="white">
       <StatusBar barStyle="dark-content"/>
@@ -20,8 +29,9 @@ const Welcome = () => {
         <View style={styles.footer}>
           <Button
             title="Getting Started"
-            buttonStyle={{marginBottom: wp()}}
-            onPress={()=>{}}
+            buttonStyle={{marginBottom: wp(10)}}
+            onPress={()=>{navigation.navigate('SignUp')}}
+
           />
         </View>
 
@@ -29,7 +39,7 @@ const Welcome = () => {
         <Text>
           Alerady have an account !
         </Text>
-        <Pressable>
+        <Pressable onPress={()=>navigation.navigate('Login')}>
           <Text style={[styles.loginText, {color:theme.colors.primaryDark, fontWeight:theme.fonsts.semibold}]}>
             Login
           </Text>

@@ -7,7 +7,7 @@ import Loading from "../components/Loading.jsx"
 const Button = ({
   buttonStyle,
   textStyle,
-  title,
+  title="",
   onPress=()=>{},
   loading=false,
   hasShadow=true  
