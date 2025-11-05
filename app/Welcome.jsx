@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-import SreenWrapper from '../components/SreenWrapper'
+import ScreenWrapper from '../components/ScreenWrapper.jsx'
 
 import { wp , hp} from '../helpers/common'
 import { theme } from '../constants/theme'
@@ -17,7 +17,8 @@ const Welcome = () => {
   const navigation = useNavigation();
 
   return (
-    <SreenWrapper bg="white">
+    <ScreenWrapper bg="white">   
+    {/* ScreenWrapper is made by me it make all insider commponent inside notch  */}
       <StatusBar barStyle="dark-content"/>
       <View style={styles.container}>
         <Image style={styles.welcomeImage} source={require('../assets/images/welcome.webp')} resizeMode="contain" />
@@ -46,7 +47,7 @@ const Welcome = () => {
         </Pressable>
       </View>
       </View>
-    </SreenWrapper>
+    </ScreenWrapper>
   )
 }
 

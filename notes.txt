@@ -10,4 +10,6 @@ useColorScheme :- In React Native, useColorScheme is a built-in Hook that lets y
 
 ActivityIndicator:  it is a built-in React Native component used to show a loading spinner — perfect for indicating that something is in progress, like a network request or a button action.
 
+navigation.canGoBack()  : It simply checks the navigation history and returns a boolean (true or false) to tell you if there is another screen to go back to.
 
+navigation.goBack()  : It is navigation function to go back
